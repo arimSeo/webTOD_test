@@ -1,0 +1,71 @@
+A.1 Screen Question-Generation
+
+ Given a screen , the agent needs to identify the elements
+requiring user input and generates corresponding
+questions .
+
+
+ Screen :
+ <p id =0 class =" alertTitle "> Create password </p>
+ <div id =1 class =" titleDivider "> </div >
+ <input id =2 class =" password "> Crowd3116 </input >
+ <input id =3 class =" confirm password "> Crowd3116 </input>
+<input id =4 class =" hint "> c3 </input >
+<input id =5 class =" edEmailAddress "> appcrawler4@gmail.com </input >
+ <p id =6 class =" tvEmailAddressInfo "> This email address will be used to reset your password . </p>
+ <button id =7 class =" button2 "> Cancel </button >
+ <button id =8 class =" button1 "> OK </button >
+
+14 Now reasoning starts :
+15 Q: How many input tags are there on the screen ?
+16 A: 4
+17 Q: What is the purpose of the screen ?
+18 A: Create password .
+
+ It 's a create password page and there are 4 input tags ,including :
+ 1. id =2 asks for password .
+ 2. id =3 asks to confirm password .
+ 3. id =4 asks for hint .
+ 4. id =5 asks for email address .
+
+ To help the user proceed with the screen , an agent will
+ask :
+ <SOQ >What password do you want to create ? (id =2) <EOQ >
+ <SOQ >Could you enter the password again to confirm ? (id=3) <EOQ >
+ <SOQ >What hint do you want to set ? (id =4) <EOQ >
+ <SOQ >What is your email in case you need to reset the password ? (id =5) <EOQ >
+
+ Screen :
+ <p id =0 > IRS2Go , </p> <button id =1 alt=" Open navigation drawer "> </button >
+ <p id =2 class =" titleRefund "> Refund Status </p>
+ <p id =3 class =" refundHeaderText "> Check your refund status by entering your information as shown on your
+2015 tax return . This tool is updated no more than once every 24 hours , usually overnight . </p>
+ <input id =4 class =" taxId3Edit " alt=" First 3 Digits of Social Security Number "> </input >
+ <p id =5 class =" dash1 "> - </p>
+ <input id =6 class =" taxId2Edit " alt=" Middle 2 Digits of Social Security Number "> </input >
+ <p id =7 class =" dash2 "> - </p>
+ <input id =8 class =" taxId4Edit " alt=" Last 4 Digits of Social Security Number "> </input >
+ <p id =9 > Filing Status </p>
+ <input id =10 class =" refundAmountEdit "> </input >
+ <button id =11 class =" privacyNoticeButton " alt=" Privacy
+Notice "> Privacy Notice , </button >
+ <button id =12 class =" getStatusButton " alt=" Get Status "> GET STATUS , </button >
+ <div id =13 class =" navigationBarBackground "> </div >
+ <div id =14 class =" statusBarBackground "> </div >
+
+Now reasoning starts :
+ Q: How many input tags are there on the screen?
+ A: 4
+ Q: What is the purpose of the screen ?
+ A: Check your refund status .
+
+It's a check refund status page and there are 4 input tags , including :
+ 1. id =4 asks for first 3 digits of SSN
+ 2. id =6 asks for middle 2 digits of SSN
+ 3. id =8 asks for last 4 digits of SSN
+ 4. id =10 asks for the amount of refund .
+
+ To help the user proceed with the screen , an agent will ask:
+ <SOQ >What is your SSN? (id =4, id =6, id =8) <EOQ >
+ <SOQ >What is the refund amount ? (id =10) <EOQ >
+ """
