@@ -1,6 +1,10 @@
 ########## html 정보 출력
 print(browser.page_source)
 
+########### 현재 창닫기
+# close()는 현재 selenium webdriver가 활성화되어 있는 화면만을 종료합니다.
+# 2개 이상의 webdriver 탭이 열려있다면 현재 활성화되어 있는 webdriver만 종료되고 나머지 webdriver는 종료되지 않습니다.
+
 
 ########### 스크롤
 # JavaScript를 사용하여 스크롤을 내립니다.
@@ -27,6 +31,11 @@ url ='https://www.naver.com'
 html = requests.get(url, headers = headers).text
 print(html)
 
+###########
+#터미널에서 입력
+# driver.find_element(By.ID, 'id').click()
+# word = input("아이디를 입력하세요 : ")
+# word = str(word)
 
 
 # ###########1) 검색창에 커서때문에 안되는건가???
